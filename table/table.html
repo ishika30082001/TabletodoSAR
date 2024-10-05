@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <title>My Table</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100%;
+    background-color: aliceblue;
+  }
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 35px;
+    letter-spacing: 2px;
+  }
+
+  form {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  form label {
+    margin-right: 10px;
+  }
+
+  form input {
+    margin-right: 10px;
+    height: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <h1>CRUD Table</h1>
+  <form id="crud-form">
+    <input type="hidden" id="index" value="" />
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="UserName" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="UserEmail" />
+    
+    <!-- <button type="submit" id="submit">Save</button> -->
+    <!-- <button onclick="addSubmit()">Save</button> -->
+    <button id="addListButton" onclick="addTask(event)">AddTask</button>
+  </form>
+
+  <table id="crud-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <td>Sarita</td>
+        <td>kwsaritaKymari@225gmail.com</td>
+        <td>mine</td> -->
+      </tr>
+    </tbody>
+  </table>
+  <script src="tabs.js"></script>
+</body>
